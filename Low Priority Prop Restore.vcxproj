@@ -158,15 +158,17 @@
       <AssemblyDebug>false</AssemblyDebug>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Dependencies\Hooking.h" />
-    <ClInclude Include="src\scanner.h" />
+    <ClInclude Include="src\Hooking.h" />
+    <ClInclude Include="src\Hooking.Patterns.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Hooking.cpp" />
+    <ClCompile Include="src\Hooking.Patterns.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
-    <ClCompile Include="src\scanner.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
